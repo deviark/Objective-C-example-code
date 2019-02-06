@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AZShopsCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="266" height="144"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="266" height="144"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopPin" translatesAutoresizingMaskIntoConstraints="NO" id="y8x-VJ-KGt">
+                        <rect key="frame" x="8" y="8" width="27" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="27" id="fJ3-Cz-BKL"/>
+                            <constraint firstAttribute="height" constant="27" id="lIe-2j-nDS"/>
+                            <constraint firstAttribute="width" constant="27" id="ls3-CH-pbf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ls3-CH-pbf"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWX-z9-19b">
+                        <rect key="frame" x="47" y="11" width="211" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="D8q-31-yEQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0a-9E-xdO">
+                        <rect key="frame" x="57" y="44" width="201" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="hmp-pc-ida"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLm-t1-4YN">
+                        <rect key="frame" x="13" y="138" width="240" height="2"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="heF-Ty-Q09"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="9Bp-wi-Sfj">
+                        <rect key="frame" x="11" y="55" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="0LC-L4-QSC"/>
+                            <constraint firstAttribute="width" constant="20" id="4In-oz-l2A"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9Bp-wi-Sfj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="11" id="2wh-Yw-8mV"/>
+                <constraint firstAttribute="trailing" secondItem="DWX-z9-19b" secondAttribute="trailing" constant="8" id="BrV-3y-Yna"/>
+                <constraint firstItem="DWX-z9-19b" firstAttribute="leading" secondItem="y8x-VJ-KGt" secondAttribute="trailing" constant="12" id="Oe4-iH-qUd"/>
+                <constraint firstAttribute="bottom" secondItem="OLm-t1-4YN" secondAttribute="bottom" constant="4" id="P22-Ti-Kq3"/>
+                <constraint firstItem="y8x-VJ-KGt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Pyc-p5-ufB"/>
+                <constraint firstAttribute="trailing" secondItem="f0a-9E-xdO" secondAttribute="trailing" constant="8" id="UPw-gb-O9P"/>
+                <constraint firstItem="f0a-9E-xdO" firstAttribute="top" secondItem="DWX-z9-19b" secondAttribute="bottom" constant="12" id="Uk5-cV-dfD"/>
+                <constraint firstItem="DWX-z9-19b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="11" id="Ytb-bZ-MFA"/>
+                <constraint firstItem="f0a-9E-xdO" firstAttribute="leading" secondItem="9Bp-wi-Sfj" secondAttribute="trailing" constant="26" id="cuM-Xi-jAC"/>
+                <constraint firstItem="OLm-t1-4YN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="13" id="fHe-3m-OH8"/>
+                <constraint firstAttribute="trailing" secondItem="OLm-t1-4YN" secondAttribute="trailing" constant="13" id="rfA-mF-HXZ"/>
+                <constraint firstItem="9Bp-wi-Sfj" firstAttribute="top" secondItem="y8x-VJ-KGt" secondAttribute="bottom" constant="20" id="w8Q-LN-3Ka"/>
+                <constraint firstItem="y8x-VJ-KGt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="xCm-MG-Nzo"/>
+            </constraints>
+            <size key="customSize" width="266" height="144"/>
+            <connections>
+                <outlet property="lblShopName" destination="DWX-z9-19b" id="ieq-aQ-OKS"/>
+                <outlet property="lblShopWorkTime" destination="f0a-9E-xdO" id="lTf-Ve-hmk"/>
+            </connections>
+            <point key="canvasLocation" x="230" y="267"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Clock" width="15" height="15"/>
+        <image name="shopPin" width="40" height="40"/>
+    </resources>
+</document>

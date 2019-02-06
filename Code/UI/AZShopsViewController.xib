@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AZShopsViewController">
+            <connections>
+                <outlet property="backgroundView" destination="4Ey-jN-jKJ" id="uQ3-d5-hHG"/>
+                <outlet property="btnMap" destination="W4A-gP-gjx" id="mFA-vK-WSd"/>
+                <outlet property="btnShops" destination="NC4-Tt-e4k" id="7sY-yc-GaC"/>
+                <outlet property="btnShowUserLocation" destination="60T-KX-f1F" id="SBY-DE-j0Y"/>
+                <outlet property="colViewShops" destination="kuh-Gb-Krx" id="3YU-f3-5f2"/>
+                <outlet property="mapShops" destination="ZeF-hq-5GL" id="BjO-ra-vBZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZeF-hq-5GL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </mapView>
+                <view userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ey-jN-jKJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kuh-Gb-Krx">
+                    <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="9Yg-3G-wu1">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="AZa-TO-Xe8"/>
+                        <outlet property="delegate" destination="-1" id="vGa-ln-9oA"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60T-KX-f1F">
+                    <rect key="frame" x="309" y="601" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="WZi-2E-GAc"/>
+                        <constraint firstAttribute="height" constant="46" id="wKX-t7-fFd"/>
+                    </constraints>
+                    <state key="normal" image="btn_Location"/>
+                    <connections>
+                        <action selector="showUserLocationTaped:" destination="-1" eventType="touchUpInside" id="xW3-Sf-sPg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC4-Tt-e4k">
+                    <rect key="frame" x="172.5" y="20" width="150" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="3x6-nw-qI7"/>
+                        <constraint firstAttribute="height" constant="30" id="Gy3-Cq-VjS"/>
+                    </constraints>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Список">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected" title="Список" backgroundImage="redBgBtn">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnShopsClicked:" destination="-1" eventType="touchUpInside" id="XcZ-TJ-bgH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4A-gP-gjx">
+                    <rect key="frame" x="52.5" y="20" width="150" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="1Td-AL-nux"/>
+                        <constraint firstAttribute="width" constant="150" id="MOy-Nm-Yz2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title=" Карта">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="selected" title="Карта" backgroundImage="redBgBtn">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnMapClicked:" destination="-1" eventType="touchUpInside" id="pHL-WJ-HfI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kuh-Gb-Krx" firstAttribute="top" secondItem="NC4-Tt-e4k" secondAttribute="bottom" constant="8" id="7Gb-gn-pgA"/>
+                <constraint firstItem="kuh-Gb-Krx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GKX-79-Lrp"/>
+                <constraint firstItem="W4A-gP-gjx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-60" id="KGk-0V-a0w"/>
+                <constraint firstItem="W4A-gP-gjx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="KXC-He-VAX"/>
+                <constraint firstItem="NC4-Tt-e4k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="M0M-Rj-b3S"/>
+                <constraint firstAttribute="bottom" secondItem="60T-KX-f1F" secondAttribute="bottom" constant="20" id="R0c-Cm-ilB"/>
+                <constraint firstItem="4Ey-jN-jKJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WQM-43-09n"/>
+                <constraint firstItem="60T-KX-f1F" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="277" id="XaB-G5-vUR"/>
+                <constraint firstItem="4Ey-jN-jKJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZCm-hj-Q9p"/>
+                <constraint firstAttribute="trailing" secondItem="ZeF-hq-5GL" secondAttribute="trailing" id="bhp-ge-9sX"/>
+                <constraint firstItem="NC4-Tt-e4k" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="60" id="cjg-bL-6Xr"/>
+                <constraint firstItem="ZeF-hq-5GL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cs7-ow-Ax5"/>
+                <constraint firstItem="ZeF-hq-5GL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dFG-q3-hFM"/>
+                <constraint firstAttribute="trailing" secondItem="60T-KX-f1F" secondAttribute="trailing" constant="20" id="f3g-bY-hM4"/>
+                <constraint firstAttribute="bottom" secondItem="ZeF-hq-5GL" secondAttribute="bottom" id="hKJ-nS-6E7"/>
+                <constraint firstItem="4Ey-jN-jKJ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="pNQ-VA-YbJ"/>
+                <constraint firstAttribute="bottom" secondItem="kuh-Gb-Krx" secondAttribute="bottom" id="prc-Fa-A7X"/>
+                <constraint firstItem="4Ey-jN-jKJ" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="rbB-8F-kYq"/>
+                <constraint firstAttribute="trailing" secondItem="kuh-Gb-Krx" secondAttribute="trailing" id="xCO-bb-ztg"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="XaB-G5-vUR"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_Location" width="32" height="32"/>
+        <image name="redBgBtn" width="175" height="31"/>
+    </resources>
+</document>
